@@ -1,4 +1,5 @@
 #!/bin/bash
+ yum install firewalld
  systemctl enable firewalld
  systemctl start firewalld
  yum -y install https://extras.getpagespeed.com/release-el7-latest.rpm 
