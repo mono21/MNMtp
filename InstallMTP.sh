@@ -1,12 +1,12 @@
 #!/bin/bash
- sudo -s yum install firewalld
+ yum install firewalld
  systemctl enable firewalld
  systemctl start firewalld
- sudo -s yum -y install https://extras.getpagespeed.com/release-el7-latest.rpm 
- sudo -s yum -y install mtproxy
+ yum -y install https://extras.getpagespeed.com/release-el7-latest.rpm 
+ yum -y install mtproxy
  systemctl enable --now mtproxy
- sudo -s firewall-cmd --zone=public --add-service=https --permanent
- sudo -s firewall-cmd --reload
+ sudo firewall-cmd --zone=public --add-service=https --permanent
+ sudo firewall-cmd --reload
  cd /etc/mtproxy
  rm -f mtproxy.params
  touch mtproxy.params
